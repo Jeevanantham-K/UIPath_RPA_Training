@@ -1,0 +1,191 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "launch.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "NewActivity.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "filterData&Sequence_5",
+        "DataExtract&Sequence_5",
+        "clientInfo&Sequence_5",
+        "browserTab&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "generic/launch.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "generic/NewActivity.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "data&Sequence_2",
+        "DataTable&Sequence_2",
+        "DataExtract&Sequence_2",
+        "clientInfo&Sequence_2",
+        "fil&Sequence_2",
+        "filterData&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "generic/login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "UserName&Sequence_1",
+        "UserPassword&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "generic/clickWork.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "generic/AcmeData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractData&Sequence_16",
+        "ExtractDataTable&Sequence_16"
+      ],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "generic/demo.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_2",
+        "ExtractData&Sequence_3",
+        "TableExtract&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "generic/updateWorkFlow.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "generic/getData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "clientInformation&Sequence_2",
+        "clientHash&Sequence_2",
+        "ClientId&Sequence_2",
+        "outClientId&Sequence_2",
+        "outClientName&Sequence_2",
+        "outClientCountry&Sequence_2",
+        "clientInfo&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "ExtractData",
+        "clientInformation"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "generic/GenerateHash.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": [
+        "clientInfo",
+        "clientHash",
+        "shaUrl"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "generic/logout.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "WorkItemsData/AcmeData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "CurrentIndex&Sequence_20",
+        "ExtractDataTable&Sequence_16",
+        "ExtractData&Sequence_16",
+        "dataColumn&Sequence_20",
+        "Page&Sequence_20",
+        "dt_page&Sequence_22"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "DataExtract"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "UpdateWorkItems/Get Page Count.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "UpdateWorkItems/getData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ClientId&Sequence_2",
+        "outClientId&Sequence_2",
+        "outClientName&Sequence_2",
+        "outClientCountry&Sequence_2",
+        "clientInfo&Sequence_2",
+        "clientHash&Sequence_2",
+        "existId&Sequence_2",
+        "pageCount&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "ExtractData",
+        "clientInformation",
+        "browserInput"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}
