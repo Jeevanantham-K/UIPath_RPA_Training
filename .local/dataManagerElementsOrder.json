@@ -1,0 +1,225 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CV Click Workflow.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "image&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "MenuItem"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "NewActivity.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ClientId&Sequence_1",
+        "Sys3Amount&Sequence_1",
+        "PageNumber&Sequence_3",
+        "FilterData&Sequence_1",
+        "CvAmount&Sequence_1",
+        "AmountArg&Sequence_1",
+        "AccountNumberArg&Sequence_1",
+        "ClientArg&Sequence_1",
+        "DataExtract&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "WorkItemsData/AcmeData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_26",
+        "CurrentIndex&Sequence_26",
+        "CurrentIndex&Sequence_28"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "DataExtract"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "WorkItemsData/Click Search.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Image&Sequence_1",
+        "ExtractDataTable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "ClientWiId"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "WorkItemsData/filterData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FilterExtractValue&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "ExtractDataTable",
+        "filterExtractData"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Get Client Data.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "Amount",
+        "AccountNumber",
+        "ClientId"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CvGenric/CV launch.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "AcmeSys3"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CvGenric/CV login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Password&Sequence_1",
+        "Username&Sequence_1",
+        "Image&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CV Click Search.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Image&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CV Search By Id.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "AcName&Sequence_4",
+        "AccountName&Sequence_4",
+        "Image&Sequence_1",
+        "image&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "ClientId"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Generic/login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "UserName&Sequence_1",
+        "UserPassword&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CV Click ClientDetails.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ClientDetails&Sequence_2",
+        "Image&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CV Client Account.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ClientAccountDetail&Sequence_2",
+        "Image&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "AcNumber"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CV Client Account Movement.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "AmountStrRegex&Sequence_3",
+        "AmountRegexPattern&Sequence_6",
+        "AddAmount&Sequence_2",
+        "TotalAmount&Sequence_2",
+        "TransactionData&Sequence_2",
+        "Click&Sequence_2",
+        "Image&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "SumAmount"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Amount Difference.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ClientAmount&Sequence_1",
+        "Image&Sequence_1",
+        "DiffAmount&Sequence_1",
+        "DiffComment&Sequence_5",
+        "Comment&Sequence_4",
+        "Image&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "WebAmount",
+        "AppAmount"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Generic/launch.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Url&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "userUrl",
+        "outBrowser"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}

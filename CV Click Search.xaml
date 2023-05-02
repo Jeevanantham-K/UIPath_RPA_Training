@@ -1,0 +1,920 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CV_Click_Search" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="486,1128" sap2010:WorkflowViewState.IdRef="CV_Click_Search_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="CV_Click_Search" sap:VirtualizedContainerService.HintSize="496,1063.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:Image" Name="Image" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="7cd2f836-aedb-4af6-9fb4-b91c16ed92ee" DisplayName="CV Screen Scope 'acme-system3.exe ACME'" sap:VirtualizedContainerService.HintSize="434,862" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+      <p:CVScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Clients' (94,36,38,12)&quot; +&#xA;&quot;Anchor: Text 'ACME System 3' (26,8,84,16)&quot;]" DesignTimeCacheId="7cd2f836-aedb-4af6-9fb4-b91c16ed92ee" DesignTimeScaleFactor="1.5" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,188.66666666666666" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="2f5a5df03e0d68ab890bbcfaf628f7b4" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+              <p:CvClickWithDescriptor.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </p:CvClickWithDescriptor.CursorPosition>
+              <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                <uc:CvDescriptor Id="17923c4d-ecea-4326-83f4-a51bd142a18b">
+                  <uc:CvDescriptor.Anchors>
+                    <x:Array Type="uc:CvElementDescriptor">
+                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="26, 8, 84, 16" ElementType="Text" Text="ACME System 3" />
+                    </x:Array>
+                  </uc:CvDescriptor.Anchors>
+                  <uc:CvDescriptor.Target>
+                    <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="94, 36, 38, 12" ElementType="Text" Text="Clients" />
+                  </uc:CvDescriptor.Target>
+                </uc:CvDescriptor>
+              </p:CvClickWithDescriptor.DesignTimeDescriptor>
+              <p:CvClickWithDescriptor.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="a380fac7-58df-4daf-9b85-fa234a84bfa6">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </p:CvClickWithDescriptor.Target>
+            </p:CvClickWithDescriptor>
+            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Search For Client' (120,80,92,12)&quot; +&#xA;&quot;Anchor: Text 'Clients' (94,36,38,12)&quot;]" DesignTimeCacheId="ed40d067-7dff-4ddf-baac-afd9496bf0f4" DesignTimeScaleFactor="1.5" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,188.66666666666666" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_2" InformativeScreenshot="4af04c943cf2f9ff50809c420bee8e22" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+              <p:CvClickWithDescriptor.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </p:CvClickWithDescriptor.CursorPosition>
+              <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                <uc:CvDescriptor Id="977d1e25-bd1f-402f-acc7-fd85250dc1da">
+                  <uc:CvDescriptor.Anchors>
+                    <x:Array Type="uc:CvElementDescriptor">
+                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="94, 36, 38, 12" ElementType="Text" Text="Clients" />
+                    </x:Array>
+                  </uc:CvDescriptor.Anchors>
+                  <uc:CvDescriptor.Target>
+                    <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="120, 80, 92, 12" ElementType="Text" Text="Search For Client" />
+                  </uc:CvDescriptor.Target>
+                </uc:CvDescriptor>
+              </p:CvClickWithDescriptor.DesignTimeDescriptor>
+              <p:CvClickWithDescriptor.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="569430b5-8dca-461a-99cd-cc128f16780e">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </p:CvClickWithDescriptor.Target>
+            </p:CvClickWithDescriptor>
+            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'By Client ID' (320,104,62,16)&quot; +&#xD;&#xA;&quot;Anchor: ArrowButton (266,80,14,16)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Search For Client' (120,80,92,12)&quot;]" DesignTimeCacheId="43157d7a-01f5-4157-b87c-42a7c255bb68" DesignTimeScaleFactor="1.5" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,188.66666666666666" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_3" InformativeScreenshot="291601b11e5620f588de385275409b45" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+              <p:CvClickWithDescriptor.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </p:CvClickWithDescriptor.CursorPosition>
+              <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                <uc:CvDescriptor Id="cd0f8e1e-9eb6-4c8e-a253-5c6cdd20243d">
+                  <uc:CvDescriptor.Anchors>
+                    <x:Array Type="uc:CvElementDescriptor">
+                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="266, 80, 14, 16" ElementType="ArrowButton" />
+                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="120, 80, 92, 12" ElementType="Text" Text="Search For Client" />
+                    </x:Array>
+                  </uc:CvDescriptor.Anchors>
+                  <uc:CvDescriptor.Target>
+                    <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="320, 104, 62, 16" ElementType="Text" Text="By Client ID" />
+                  </uc:CvDescriptor.Target>
+                </uc:CvDescriptor>
+              </p:CvClickWithDescriptor.DesignTimeDescriptor>
+              <p:CvClickWithDescriptor.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="67ab7929-cb1c-40ad-a78e-c3ab079290d3">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </p:CvClickWithDescriptor.Target>
+            </p:CvClickWithDescriptor>
+          </Sequence>
+        </ActivityAction>
+      </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+      </p:CVScope.DesignTimeCache>
+      <p:CVScope.DesignTimeCacheContainer>
+        <uc:CvCacheContainer>
+          <uc:CvCacheContainer.Caches>
+            <scg:List x:TypeArguments="uc:CVCache" Capacity="3">
+              <uc:CVCache DataSent="False" DisplayName="Screen CV Click - 'Clients' (Main)" Id="7cd2f836-aedb-4af6-9fb4-b91c16ed92ee" InformativeScreenshot="fb51b784aaf0fd599f65384d4861306a" LogicalPosition="410, 158" OcrText="ACME System 3 _ X File View Clients Accounts Transactions Help Welcome, jeevanantham2412@gmail.com To perform individual actions. please use the main menu Newest Clients ClientID Name City Country EU67601 Floy Shedd TOULOUSE France FP75053 Bud Baril MONT-DE-MARSAN France DB83622 Wilson Gau Canzano Italy AD38755 Austin Villacorta Mediglia Italy QS86336 Donn Chabot Ebersbrunn Germany HR70321 Clement Paulette Deva Romania AD55686 Digna Buffaloe Solingen Merscheid Germany FT44139 Allan Camara Pfeffenhausen Germany KJ93404 Garret Reising San Filippo Italy CX76110 Mirian Derosier Dresden Germany" Position="410, 158" ScaleFactor="1.5" ScreenshotGuid="4dff1931-ca76-490b-9707-00d34f364d1f" ServerVersion="1">
+                <uc:CVCache.CvAnchorRelations>
+                  <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
+                </uc:CVCache.CvAnchorRelations>
+                <uc:CVCache.CvTables>
+                  <x:Array Type="uc:CvTableInfo">
+                    <uc:CvTableInfo>
+                      <uc:CvTableInfo.Columns>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>10</x:Int32>
+                          <x:Int32>88</x:Int32>
+                          <x:Int32>388</x:Int32>
+                          <x:Int32>536</x:Int32>
+                          <x:Int32>686</x:Int32>
+                          <x:Int32>718</x:Int32>
+                        </x:Array>
+                      </uc:CvTableInfo.Columns>
+                      <uc:CvTableInfo.Rows>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>202</x:Int32>
+                          <x:Int32>230</x:Int32>
+                          <x:Int32>248</x:Int32>
+                          <x:Int32>266</x:Int32>
+                          <x:Int32>286</x:Int32>
+                          <x:Int32>304</x:Int32>
+                          <x:Int32>324</x:Int32>
+                          <x:Int32>342</x:Int32>
+                          <x:Int32>360</x:Int32>
+                          <x:Int32>380</x:Int32>
+                          <x:Int32>400</x:Int32>
+                          <x:Int32>418</x:Int32>
+                          <x:Int32>438</x:Int32>
+                          <x:Int32>446</x:Int32>
+                        </x:Array>
+                      </uc:CvTableInfo.Rows>
+                    </uc:CvTableInfo>
+                  </x:Array>
+                </uc:CVCache.CvTables>
+                <uc:CVCache.CvUiElements>
+                  <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="128">
+                    <uc:CvElementInfo Category="CloseButton" Region="699, 6, 19, 18" />
+                    <uc:CvElementInfo Category="Icon" Region="6, 5, 18, 19" />
+                    <uc:CvElementInfo Category="MaximizeButton" Region="652, 5, 20, 20" />
+                    <uc:CvElementInfo Category="MinimizeButton" Region="605, 6, 21, 17" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 286, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 248, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 266, 76, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 304, 76, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 342, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 324, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 400, 76, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 342, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 381, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 248, 32, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 230, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 286, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 361, 76, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 266, 32, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 248, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 324, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 400, 150, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 342, 32, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 266, 148, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 304, 148, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 202, 76, 27" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 324, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 286, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 324, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 266, 150, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 400, 148, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 248, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 286, 32, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 304, 150, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 342, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 342, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 304, 300, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 361, 148, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 361, 32, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 381, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 381, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 248, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 324, 32, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 202, 300, 27" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 202, 148, 27" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 419, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 266, 300, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 400, 300, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 202, 150, 27" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 361, 300, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 304, 32, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 381, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 419, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 286, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 381, 32, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 230, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 419, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 400, 32, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 361, 150, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 230, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 419, 32, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 419, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 230, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 438, 150, 8" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 438, 32, 8" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 438, 76, 8" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 438, 148, 8" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 202, 32, 46" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 438, 300, 8" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 230, 32, 18" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="8, 63, 721, 56" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="8, 125, 716, 36" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="300, 34, 29, 16" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="392, 211, 24, 18" />
+                  </scg:List>
+                </uc:CVCache.CvUiElements>
+                <uc:CVCache.OcrTexts>
+                  <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="80">
+                    <uc:OcrTextInfo Region="26, 8, 34, 12" Text="ACME" />
+                    <uc:OcrTextInfo Region="62, 10, 40, 14" Text="System" />
+                    <uc:OcrTextInfo Region="102, 10, 8, 12" Text="3" />
+                    <uc:OcrTextInfo Region="608, 4, 12, 12" Text="_" />
+                    <uc:OcrTextInfo Region="702, 8, 12, 14" Text="X" />
+                    <uc:OcrTextInfo Region="14, 36, 18, 12" Text="File" />
+                    <uc:OcrTextInfo Region="48, 36, 28, 12" Text="View" />
+                    <uc:OcrTextInfo Region="94, 36, 38, 12" Text="Clients" />
+                    <uc:OcrTextInfo Region="148, 36, 52, 12" Text="Accounts" />
+                    <uc:OcrTextInfo Region="218, 36, 66, 12" Text="Transactions" />
+                    <uc:OcrTextInfo Region="302, 36, 26, 14" Text="Help" />
+                    <uc:OcrTextInfo Region="138, 80, 108, 24" Text="Welcome," />
+                    <uc:OcrTextInfo Region="250, 80, 336, 26" Text="jeevanantham2412@gmail.com" />
+                    <uc:OcrTextInfo Region="210, 138, 16, 12" Text="To" />
+                    <uc:OcrTextInfo Region="226, 138, 44, 14" Text="perform" />
+                    <uc:OcrTextInfo Region="272, 138, 54, 12" Text="individual" />
+                    <uc:OcrTextInfo Region="328, 138, 42, 12" Text="actions." />
+                    <uc:OcrTextInfo Region="372, 138, 38, 14" Text="please" />
+                    <uc:OcrTextInfo Region="412, 140, 22, 8" Text="use" />
+                    <uc:OcrTextInfo Region="436, 138, 18, 10" Text="the" />
+                    <uc:OcrTextInfo Region="456, 138, 30, 10" Text="main" />
+                    <uc:OcrTextInfo Region="486, 140, 34, 8" Text="menu" />
+                    <uc:OcrTextInfo Region="14, 188, 42, 12" Text="Newest" />
+                    <uc:OcrTextInfo Region="58, 188, 38, 12" Text="Clients" />
+                    <uc:OcrTextInfo Region="18, 214, 44, 12" Text="ClientID" />
+                    <uc:OcrTextInfo Region="94, 214, 36, 12" Text="Name" />
+                    <uc:OcrTextInfo Region="394, 214, 22, 14" Text="City" />
+                    <uc:OcrTextInfo Region="544, 214, 44, 14" Text="Country" />
+                    <uc:OcrTextInfo Region="20, 236, 52, 12" Text="EU67601" />
+                    <uc:OcrTextInfo Region="94, 236, 24, 14" Text="Floy" />
+                    <uc:OcrTextInfo Region="120, 236, 36, 12" Text="Shedd" />
+                    <uc:OcrTextInfo Region="394, 236, 68, 12" Text="TOULOUSE" />
+                    <uc:OcrTextInfo Region="544, 236, 40, 12" Text="France" />
+                    <uc:OcrTextInfo Region="18, 254, 52, 12" Text="FP75053" />
+                    <uc:OcrTextInfo Region="94, 254, 22, 12" Text="Bud" />
+                    <uc:OcrTextInfo Region="118, 254, 26, 12" Text="Baril" />
+                    <uc:OcrTextInfo Region="394, 254, 114, 12" Text="MONT-DE-MARSAN" />
+                    <uc:OcrTextInfo Region="544, 254, 40, 12" Text="France" />
+                    <uc:OcrTextInfo Region="18, 274, 54, 12" Text="DB83622" />
+                    <uc:OcrTextInfo Region="94, 274, 38, 12" Text="Wilson" />
+                    <uc:OcrTextInfo Region="134, 274, 24, 12" Text="Gau" />
+                    <uc:OcrTextInfo Region="394, 274, 50, 12" Text="Canzano" />
+                    <uc:OcrTextInfo Region="544, 274, 24, 14" Text="Italy" />
+                    <uc:OcrTextInfo Region="18, 292, 54, 12" Text="AD38755" />
+                    <uc:OcrTextInfo Region="92, 292, 36, 12" Text="Austin" />
+                    <uc:OcrTextInfo Region="130, 292, 52, 12" Text="Villacorta" />
+                    <uc:OcrTextInfo Region="394, 292, 50, 14" Text="Mediglia" />
+                    <uc:OcrTextInfo Region="544, 292, 24, 14" Text="Italy" />
+                    <uc:OcrTextInfo Region="18, 312, 54, 12" Text="QS86336" />
+                    <uc:OcrTextInfo Region="94, 312, 32, 12" Text="Donn" />
+                    <uc:OcrTextInfo Region="126, 312, 42, 12" Text="Chabot" />
+                    <uc:OcrTextInfo Region="394, 312, 66, 12" Text="Ebersbrunn" />
+                    <uc:OcrTextInfo Region="544, 312, 52, 14" Text="Germany" />
+                    <uc:OcrTextInfo Region="20, 330, 52, 12" Text="HR70321" />
+                    <uc:OcrTextInfo Region="94, 330, 48, 12" Text="Clement" />
+                    <uc:OcrTextInfo Region="142, 330, 46, 12" Text="Paulette" />
+                    <uc:OcrTextInfo Region="394, 330, 28, 12" Text="Deva" />
+                    <uc:OcrTextInfo Region="544, 330, 52, 12" Text="Romania" />
+                    <uc:OcrTextInfo Region="18, 350, 52, 12" Text="AD55686" />
+                    <uc:OcrTextInfo Region="94, 350, 34, 14" Text="Digna" />
+                    <uc:OcrTextInfo Region="130, 350, 46, 12" Text="Buffaloe" />
+                    <uc:OcrTextInfo Region="394, 350, 50, 14" Text="Solingen" />
+                    <uc:OcrTextInfo Region="446, 350, 60, 12" Text="Merscheid" />
+                    <uc:OcrTextInfo Region="544, 350, 52, 14" Text="Germany" />
+                    <uc:OcrTextInfo Region="18, 368, 50, 12" Text="FT44139" />
+                    <uc:OcrTextInfo Region="92, 368, 30, 12" Text="Allan" />
+                    <uc:OcrTextInfo Region="124, 368, 46, 12" Text="Camara" />
+                    <uc:OcrTextInfo Region="394, 368, 80, 12" Text="Pfeffenhausen" />
+                    <uc:OcrTextInfo Region="544, 368, 52, 14" Text="Germany" />
+                    <uc:OcrTextInfo Region="18, 386, 50, 12" Text="KJ93404" />
+                    <uc:OcrTextInfo Region="94, 388, 36, 12" Text="Garret" />
+                    <uc:OcrTextInfo Region="132, 388, 42, 14" Text="Reising" />
+                    <uc:OcrTextInfo Region="394, 388, 24, 12" Text="San" />
+                    <uc:OcrTextInfo Region="418, 388, 38, 14" Text="Filippo" />
+                    <uc:OcrTextInfo Region="544, 388, 24, 14" Text="Italy" />
+                    <uc:OcrTextInfo Region="18, 406, 52, 12" Text="CX76110" />
+                    <uc:OcrTextInfo Region="94, 406, 36, 12" Text="Mirian" />
+                    <uc:OcrTextInfo Region="132, 406, 48, 12" Text="Derosier" />
+                    <uc:OcrTextInfo Region="394, 406, 48, 12" Text="Dresden" />
+                    <uc:OcrTextInfo Region="544, 406, 52, 14" Text="Germany" />
+                  </scg:List>
+                </uc:CVCache.OcrTexts>
+              </uc:CVCache>
+              <uc:CVCache DataSent="False" DisplayName="Screen CV Click - ArrowButton" Id="ed40d067-7dff-4ddf-baac-afd9496bf0f4" InformativeScreenshot="db41da10246e2eafd46fae06eff2bf07" LogicalPosition="410, 158" OcrText="ACME System 3 _ X File View Clients Accounts Transactions Help Add New Client Ctrl+N Search For Client vanantham2412@gmail.com Auto Save Delete Client reopenoreedividual actions. please use the main menu Newest Clients ClientID Name City Country EU67601 Floy Shedd TOULOUSE France FP75053 Bud Baril MONT-DE-MARSAN France DB83622 Wilson Gau Canzano Italy AD38755 Austin Villacorta Mediglia Italy QS86336 Donn Chabot Ebersbrunn Germany HR70321 Clement Paulette Deva Romania AD55686 Digna Buffaloe Solingen Merscheid Germany FT44139 Allan Camara Pfeffenhausen Germany KJ93404 Garret Reising San Filippo Italy CX76110 Mirian Derosier Dresden Germany" Position="410, 158" ScaleFactor="1.5" ScreenshotGuid="66e78a8c-9f54-4f0c-b7ee-49da68086a72" ServerVersion="1">
+                <uc:CVCache.CvAnchorRelations>
+                  <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
+                    <uc:AnchorRelationInfo IsTargetText="True" Target="14">
+                      <uc:AnchorRelationInfo.Anchors>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>11</x:Int32>
+                          <x:Int32>12</x:Int32>
+                          <x:Int32>13</x:Int32>
+                        </x:Array>
+                      </uc:AnchorRelationInfo.Anchors>
+                    </uc:AnchorRelationInfo>
+                  </scg:List>
+                </uc:CVCache.CvAnchorRelations>
+                <uc:CVCache.CvTables>
+                  <x:Array Type="uc:CvTableInfo">
+                    <uc:CvTableInfo>
+                      <uc:CvTableInfo.Columns>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>10</x:Int32>
+                          <x:Int32>88</x:Int32>
+                          <x:Int32>388</x:Int32>
+                          <x:Int32>536</x:Int32>
+                          <x:Int32>686</x:Int32>
+                          <x:Int32>718</x:Int32>
+                        </x:Array>
+                      </uc:CvTableInfo.Columns>
+                      <uc:CvTableInfo.Rows>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>202</x:Int32>
+                          <x:Int32>230</x:Int32>
+                          <x:Int32>248</x:Int32>
+                          <x:Int32>266</x:Int32>
+                          <x:Int32>286</x:Int32>
+                          <x:Int32>304</x:Int32>
+                          <x:Int32>324</x:Int32>
+                          <x:Int32>342</x:Int32>
+                          <x:Int32>362</x:Int32>
+                          <x:Int32>380</x:Int32>
+                          <x:Int32>400</x:Int32>
+                          <x:Int32>418</x:Int32>
+                          <x:Int32>438</x:Int32>
+                          <x:Int32>446</x:Int32>
+                        </x:Array>
+                      </uc:CvTableInfo.Rows>
+                    </uc:CvTableInfo>
+                  </x:Array>
+                </uc:CVCache.CvTables>
+                <uc:CVCache.CvUiElements>
+                  <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="128">
+                    <uc:CvElementInfo Category="CloseButton" Region="699, 6, 19, 18" />
+                    <uc:CvElementInfo Category="Icon" Region="6, 5, 18, 19" />
+                    <uc:CvElementInfo Category="MaximizeButton" Region="652, 5, 20, 20" />
+                    <uc:CvElementInfo Category="MinimizeButton" Region="605, 6, 21, 17" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="265, 79, 14, 16" />
+                    <uc:CvElementInfo Category="Button" Region="85, 31, 56, 22" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 286, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 248, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 266, 76, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 304, 76, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 342, 76, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 324, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 400, 76, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 342, 148, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 381, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 248, 32, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 230, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 286, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 362, 76, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 266, 32, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 248, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 324, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 400, 150, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 202, 76, 27" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 342, 32, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 266, 148, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 304, 148, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 324, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 286, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 324, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 266, 150, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 400, 148, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 248, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 286, 32, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 304, 150, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 342, 150, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 342, 300, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 304, 300, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 362, 148, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 362, 32, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 381, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 381, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 248, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 324, 32, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 266, 300, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 202, 148, 27" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 419, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 400, 300, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 202, 150, 27" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 362, 300, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 304, 32, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 381, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 419, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 286, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 381, 32, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 230, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 419, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 400, 32, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 362, 150, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 202, 300, 27" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 230, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 419, 32, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 419, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 230, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 438, 150, 8" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 438, 32, 8" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 438, 76, 8" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 438, 148, 8" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 202, 32, 46" />
+                    <uc:CvElementInfo Category="Cell" Region="84, 119, 132, 22" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 438, 300, 8" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 230, 32, 18" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="142, 32, 67, 20" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="245, 57, 12, 14" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="392, 211, 24, 18" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="214, 120, 70, 22" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="216, 52, 70, 22" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="218, 122, 56, 11" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="212, 130, 70, 10" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="218, 119, 58, 10" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="216, 102, 68, 18" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="216, 95, 68, 18" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="218, 111, 56, 12" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="218, 112, 64, 20" />
+                  </scg:List>
+                </uc:CVCache.CvUiElements>
+                <uc:CVCache.OcrTexts>
+                  <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="88">
+                    <uc:OcrTextInfo Region="26, 8, 34, 12" Text="ACME" />
+                    <uc:OcrTextInfo Region="62, 10, 40, 14" Text="System" />
+                    <uc:OcrTextInfo Region="102, 10, 8, 12" Text="3" />
+                    <uc:OcrTextInfo Region="608, 4, 12, 12" Text="_" />
+                    <uc:OcrTextInfo Region="702, 8, 12, 14" Text="X" />
+                    <uc:OcrTextInfo Region="14, 36, 18, 12" Text="File" />
+                    <uc:OcrTextInfo Region="48, 36, 28, 12" Text="View" />
+                    <uc:OcrTextInfo Region="94, 36, 38, 12" Text="Clients" />
+                    <uc:OcrTextInfo Region="148, 36, 54, 12" Text="Accounts" />
+                    <uc:OcrTextInfo Region="218, 36, 66, 12" Text="Transactions" />
+                    <uc:OcrTextInfo Region="302, 36, 26, 14" Text="Help" />
+                    <uc:OcrTextInfo Region="120, 58, 24, 12" Text="Add" />
+                    <uc:OcrTextInfo Region="146, 58, 24, 10" Text="New" />
+                    <uc:OcrTextInfo Region="174, 58, 32, 12" Text="Client" />
+                    <uc:OcrTextInfo Region="218, 58, 38, 12" Text="Ctrl+N" />
+                    <uc:OcrTextInfo Region="120, 80, 36, 12" Text="Search" />
+                    <uc:OcrTextInfo Region="158, 80, 20, 10" Text="For" />
+                    <uc:OcrTextInfo Region="180, 80, 32, 12" Text="Client" />
+                    <uc:OcrTextInfo Region="284, 80, 304, 26" Text="vanantham2412@gmail.com" />
+                    <uc:OcrTextInfo Region="120, 102, 28, 12" Text="Auto" />
+                    <uc:OcrTextInfo Region="150, 102, 26, 12" Text="Save" />
+                    <uc:OcrTextInfo Region="122, 124, 34, 12" Text="Delete" />
+                    <uc:OcrTextInfo Region="158, 124, 32, 12" Text="Client" />
+                    <uc:OcrTextInfo Region="212, 138, 114, 12" Text="reopenoreedividual" />
+                    <uc:OcrTextInfo Region="328, 138, 42, 12" Text="actions." />
+                    <uc:OcrTextInfo Region="372, 138, 38, 14" Text="please" />
+                    <uc:OcrTextInfo Region="412, 140, 22, 8" Text="use" />
+                    <uc:OcrTextInfo Region="436, 138, 18, 10" Text="the" />
+                    <uc:OcrTextInfo Region="456, 138, 30, 10" Text="main" />
+                    <uc:OcrTextInfo Region="486, 140, 34, 8" Text="menu" />
+                    <uc:OcrTextInfo Region="14, 188, 42, 12" Text="Newest" />
+                    <uc:OcrTextInfo Region="58, 188, 38, 12" Text="Clients" />
+                    <uc:OcrTextInfo Region="18, 214, 44, 12" Text="ClientID" />
+                    <uc:OcrTextInfo Region="94, 214, 36, 12" Text="Name" />
+                    <uc:OcrTextInfo Region="394, 214, 22, 14" Text="City" />
+                    <uc:OcrTextInfo Region="544, 214, 44, 14" Text="Country" />
+                    <uc:OcrTextInfo Region="20, 236, 52, 12" Text="EU67601" />
+                    <uc:OcrTextInfo Region="94, 236, 24, 14" Text="Floy" />
+                    <uc:OcrTextInfo Region="120, 236, 36, 12" Text="Shedd" />
+                    <uc:OcrTextInfo Region="394, 236, 68, 12" Text="TOULOUSE" />
+                    <uc:OcrTextInfo Region="544, 236, 40, 12" Text="France" />
+                    <uc:OcrTextInfo Region="18, 254, 52, 12" Text="FP75053" />
+                    <uc:OcrTextInfo Region="94, 254, 22, 12" Text="Bud" />
+                    <uc:OcrTextInfo Region="118, 254, 26, 12" Text="Baril" />
+                    <uc:OcrTextInfo Region="394, 254, 114, 12" Text="MONT-DE-MARSAN" />
+                    <uc:OcrTextInfo Region="544, 254, 40, 12" Text="France" />
+                    <uc:OcrTextInfo Region="18, 274, 54, 12" Text="DB83622" />
+                    <uc:OcrTextInfo Region="94, 274, 38, 12" Text="Wilson" />
+                    <uc:OcrTextInfo Region="134, 274, 24, 12" Text="Gau" />
+                    <uc:OcrTextInfo Region="394, 274, 50, 12" Text="Canzano" />
+                    <uc:OcrTextInfo Region="544, 274, 24, 14" Text="Italy" />
+                    <uc:OcrTextInfo Region="18, 292, 54, 12" Text="AD38755" />
+                    <uc:OcrTextInfo Region="92, 292, 36, 12" Text="Austin" />
+                    <uc:OcrTextInfo Region="130, 292, 52, 12" Text="Villacorta" />
+                    <uc:OcrTextInfo Region="394, 292, 50, 14" Text="Mediglia" />
+                    <uc:OcrTextInfo Region="544, 292, 24, 14" Text="Italy" />
+                    <uc:OcrTextInfo Region="18, 312, 54, 12" Text="QS86336" />
+                    <uc:OcrTextInfo Region="94, 312, 32, 12" Text="Donn" />
+                    <uc:OcrTextInfo Region="126, 312, 42, 12" Text="Chabot" />
+                    <uc:OcrTextInfo Region="394, 312, 66, 12" Text="Ebersbrunn" />
+                    <uc:OcrTextInfo Region="544, 312, 52, 14" Text="Germany" />
+                    <uc:OcrTextInfo Region="20, 330, 52, 12" Text="HR70321" />
+                    <uc:OcrTextInfo Region="94, 330, 48, 12" Text="Clement" />
+                    <uc:OcrTextInfo Region="142, 330, 46, 12" Text="Paulette" />
+                    <uc:OcrTextInfo Region="394, 330, 28, 12" Text="Deva" />
+                    <uc:OcrTextInfo Region="544, 330, 52, 12" Text="Romania" />
+                    <uc:OcrTextInfo Region="18, 350, 52, 12" Text="AD55686" />
+                    <uc:OcrTextInfo Region="94, 350, 34, 14" Text="Digna" />
+                    <uc:OcrTextInfo Region="130, 350, 46, 12" Text="Buffaloe" />
+                    <uc:OcrTextInfo Region="394, 350, 50, 14" Text="Solingen" />
+                    <uc:OcrTextInfo Region="446, 350, 60, 12" Text="Merscheid" />
+                    <uc:OcrTextInfo Region="544, 350, 52, 14" Text="Germany" />
+                    <uc:OcrTextInfo Region="18, 368, 50, 12" Text="FT44139" />
+                    <uc:OcrTextInfo Region="92, 368, 30, 12" Text="Allan" />
+                    <uc:OcrTextInfo Region="124, 368, 46, 12" Text="Camara" />
+                    <uc:OcrTextInfo Region="394, 368, 80, 12" Text="Pfeffenhausen" />
+                    <uc:OcrTextInfo Region="544, 368, 52, 14" Text="Germany" />
+                    <uc:OcrTextInfo Region="18, 386, 50, 12" Text="KJ93404" />
+                    <uc:OcrTextInfo Region="94, 388, 36, 12" Text="Garret" />
+                    <uc:OcrTextInfo Region="132, 388, 42, 14" Text="Reising" />
+                    <uc:OcrTextInfo Region="394, 388, 24, 12" Text="San" />
+                    <uc:OcrTextInfo Region="418, 388, 38, 14" Text="Filippo" />
+                    <uc:OcrTextInfo Region="544, 388, 24, 14" Text="Italy" />
+                    <uc:OcrTextInfo Region="18, 406, 52, 12" Text="CX76110" />
+                    <uc:OcrTextInfo Region="94, 406, 36, 12" Text="Mirian" />
+                    <uc:OcrTextInfo Region="132, 406, 48, 12" Text="Derosier" />
+                    <uc:OcrTextInfo Region="394, 406, 48, 12" Text="Dresden" />
+                    <uc:OcrTextInfo Region="544, 406, 52, 14" Text="Germany" />
+                  </scg:List>
+                </uc:CVCache.OcrTexts>
+              </uc:CVCache>
+              <uc:CVCache DataSent="False" DisplayName="Screen CV Click - 'By Client I" Id="43157d7a-01f5-4157-b87c-42a7c255bb68" InformativeScreenshot="21cf0b86e3fb666ae2222e180cac3aa6" LogicalPosition="748, 239" OcrText="ACME System 3 _ X File View Clients Accounts Transactions Help Add New Client Ctrl+N Search For Client By Name 112@gmail.com Auto Save By Client ID Delete Client reperrormeedividual actions. please use the main menu Newest Clients ClientID Name City Country EU67601 Floy Shedd TOULOUSE France FP75053 Bud Baril MONT-DE-MARSAN France DB83622 Wilson Gau Canzano Italy AD38755 Austin Villacorta Mediglia Italy QS86336 Donn Chabot Ebersbrunn Germany HR70321 Clement Paulette Deva Romania AD55686 Digna Buffaloe Solingen Merscheid Germany FT44139 Allan Camara Pfeffenhausen Germany KJ93404 Garret Reising San Filippo Italy CX76110 Mirian Derosier Dresden Germany" Position="748, 239" ScaleFactor="1.5" ScreenshotGuid="a9ff5144-0caf-4e62-8fbf-b4fed72ec174" ServerVersion="1">
+                <uc:CVCache.CvAnchorRelations>
+                  <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
+                </uc:CVCache.CvAnchorRelations>
+                <uc:CVCache.CvTables>
+                  <x:Array Type="uc:CvTableInfo">
+                    <uc:CvTableInfo>
+                      <uc:CvTableInfo.Columns>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>10</x:Int32>
+                          <x:Int32>88</x:Int32>
+                          <x:Int32>388</x:Int32>
+                          <x:Int32>536</x:Int32>
+                          <x:Int32>686</x:Int32>
+                          <x:Int32>718</x:Int32>
+                        </x:Array>
+                      </uc:CvTableInfo.Columns>
+                      <uc:CvTableInfo.Rows>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>202</x:Int32>
+                          <x:Int32>230</x:Int32>
+                          <x:Int32>248</x:Int32>
+                          <x:Int32>266</x:Int32>
+                          <x:Int32>286</x:Int32>
+                          <x:Int32>304</x:Int32>
+                          <x:Int32>324</x:Int32>
+                          <x:Int32>342</x:Int32>
+                          <x:Int32>362</x:Int32>
+                          <x:Int32>380</x:Int32>
+                          <x:Int32>400</x:Int32>
+                          <x:Int32>420</x:Int32>
+                          <x:Int32>438</x:Int32>
+                          <x:Int32>446</x:Int32>
+                        </x:Array>
+                      </uc:CvTableInfo.Rows>
+                    </uc:CvTableInfo>
+                    <uc:CvTableInfo>
+                      <uc:CvTableInfo.Columns>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>84</x:Int32>
+                          <x:Int32>110</x:Int32>
+                          <x:Int32>212</x:Int32>
+                          <x:Int32>284</x:Int32>
+                          <x:Int32>288</x:Int32>
+                        </x:Array>
+                      </uc:CvTableInfo.Columns>
+                      <uc:CvTableInfo.Rows>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>52</x:Int32>
+                          <x:Int32>74</x:Int32>
+                          <x:Int32>94</x:Int32>
+                          <x:Int32>118</x:Int32>
+                          <x:Int32>142</x:Int32>
+                        </x:Array>
+                      </uc:CvTableInfo.Rows>
+                    </uc:CvTableInfo>
+                  </x:Array>
+                </uc:CVCache.CvTables>
+                <uc:CVCache.CvUiElements>
+                  <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="128">
+                    <uc:CvElementInfo Category="CloseButton" Region="699, 6, 19, 18" />
+                    <uc:CvElementInfo Category="Icon" Region="6, 5, 18, 19" />
+                    <uc:CvElementInfo Category="MaximizeButton" Region="652, 5, 20, 20" />
+                    <uc:CvElementInfo Category="MinimizeButton" Region="605, 6, 21, 17" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="266, 80, 14, 16" />
+                    <uc:CvElementInfo Category="Button" Region="86, 31, 56, 22" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 286, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 248, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 266, 76, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 304, 76, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 342, 76, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 324, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 401, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 342, 148, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 381, 76, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 248, 32, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 230, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 286, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 362, 76, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 248, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 266, 32, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 324, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 401, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 202, 76, 27" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 342, 32, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 266, 148, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 304, 148, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 324, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 286, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 324, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 266, 150, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 401, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 248, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 286, 32, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 304, 150, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 342, 150, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 342, 300, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 304, 300, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 362, 148, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 362, 32, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 381, 148, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 381, 300, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 248, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 202, 148, 27" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 324, 32, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 266, 300, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 420, 76, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 401, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 202, 150, 27" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 362, 300, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 304, 32, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 381, 150, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 420, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 286, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 381, 32, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 230, 150, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 420, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 401, 32, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 362, 150, 19" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 230, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 420, 32, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 202, 300, 27" />
+                    <uc:CvElementInfo Category="Cell" Region="84, 74, 24, 21" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 420, 300, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 230, 148, 18" />
+                    <uc:CvElementInfo Category="Cell" Region="84, 95, 24, 24" />
+                    <uc:CvElementInfo Category="Cell" Region="536, 438, 150, 8" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 438, 32, 8" />
+                    <uc:CvElementInfo Category="Cell" Region="10, 438, 76, 8" />
+                    <uc:CvElementInfo Category="Cell" Region="84, 52, 24, 22" />
+                    <uc:CvElementInfo Category="Cell" Region="110, 119, 102, 24" />
+                    <uc:CvElementInfo Category="Cell" Region="388, 438, 148, 8" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 202, 32, 46" />
+                    <uc:CvElementInfo Category="Cell" Region="88, 438, 300, 8" />
+                    <uc:CvElementInfo Category="Cell" Region="686, 230, 32, 18" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="143, 32, 66, 20" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="319, 102, 17, 17" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="301, 34, 28, 16" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="110, 95, 102, 24" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="84, 119, 24, 24" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="110, 52, 102, 22" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="212, 119, 72, 24" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="212, 95, 72, 24" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="110, 74, 102, 21" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="212, 74, 72, 21" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="212, 52, 72, 22" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="294, 74, 126, 23" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="412, 64, 310, 53" />
+                  </scg:List>
+                </uc:CVCache.CvUiElements>
+                <uc:CVCache.OcrTexts>
+                  <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="93">
+                    <uc:OcrTextInfo Region="26, 8, 34, 12" Text="ACME" />
+                    <uc:OcrTextInfo Region="62, 10, 40, 14" Text="System" />
+                    <uc:OcrTextInfo Region="102, 10, 8, 12" Text="3" />
+                    <uc:OcrTextInfo Region="608, 4, 12, 12" Text="_" />
+                    <uc:OcrTextInfo Region="702, 8, 12, 14" Text="X" />
+                    <uc:OcrTextInfo Region="14, 36, 18, 12" Text="File" />
+                    <uc:OcrTextInfo Region="48, 36, 28, 12" Text="View" />
+                    <uc:OcrTextInfo Region="94, 36, 38, 12" Text="Clients" />
+                    <uc:OcrTextInfo Region="148, 36, 54, 12" Text="Accounts" />
+                    <uc:OcrTextInfo Region="218, 36, 66, 12" Text="Transactions" />
+                    <uc:OcrTextInfo Region="302, 36, 26, 14" Text="Help" />
+                    <uc:OcrTextInfo Region="120, 58, 24, 12" Text="Add" />
+                    <uc:OcrTextInfo Region="146, 58, 24, 12" Text="New" />
+                    <uc:OcrTextInfo Region="174, 58, 32, 12" Text="Client" />
+                    <uc:OcrTextInfo Region="218, 58, 38, 12" Text="Ctrl+N" />
+                    <uc:OcrTextInfo Region="120, 80, 36, 12" Text="Search" />
+                    <uc:OcrTextInfo Region="158, 80, 20, 10" Text="For" />
+                    <uc:OcrTextInfo Region="180, 80, 32, 12" Text="Client" />
+                    <uc:OcrTextInfo Region="320, 82, 16, 14" Text="By" />
+                    <uc:OcrTextInfo Region="338, 82, 34, 12" Text="Name" />
+                    <uc:OcrTextInfo Region="422, 80, 166, 26" Text="112@gmail.com" />
+                    <uc:OcrTextInfo Region="120, 102, 28, 10" Text="Auto" />
+                    <uc:OcrTextInfo Region="150, 102, 26, 10" Text="Save" />
+                    <uc:OcrTextInfo Region="320, 104, 14, 16" Text="By" />
+                    <uc:OcrTextInfo Region="338, 104, 32, 12" Text="Client" />
+                    <uc:OcrTextInfo Region="370, 104, 12, 12" Text="ID" />
+                    <uc:OcrTextInfo Region="120, 124, 34, 10" Text="Delete" />
+                    <uc:OcrTextInfo Region="158, 124, 32, 10" Text="Client" />
+                    <uc:OcrTextInfo Region="212, 138, 114, 12" Text="reperrormeedividual" />
+                    <uc:OcrTextInfo Region="328, 138, 42, 12" Text="actions." />
+                    <uc:OcrTextInfo Region="372, 138, 38, 14" Text="please" />
+                    <uc:OcrTextInfo Region="412, 140, 22, 8" Text="use" />
+                    <uc:OcrTextInfo Region="436, 138, 18, 10" Text="the" />
+                    <uc:OcrTextInfo Region="456, 138, 30, 10" Text="main" />
+                    <uc:OcrTextInfo Region="486, 140, 34, 8" Text="menu" />
+                    <uc:OcrTextInfo Region="14, 188, 42, 12" Text="Newest" />
+                    <uc:OcrTextInfo Region="58, 188, 38, 12" Text="Clients" />
+                    <uc:OcrTextInfo Region="18, 214, 44, 12" Text="ClientID" />
+                    <uc:OcrTextInfo Region="94, 214, 36, 12" Text="Name" />
+                    <uc:OcrTextInfo Region="394, 214, 22, 14" Text="City" />
+                    <uc:OcrTextInfo Region="544, 214, 44, 14" Text="Country" />
+                    <uc:OcrTextInfo Region="20, 236, 52, 12" Text="EU67601" />
+                    <uc:OcrTextInfo Region="94, 236, 24, 14" Text="Floy" />
+                    <uc:OcrTextInfo Region="120, 236, 36, 12" Text="Shedd" />
+                    <uc:OcrTextInfo Region="394, 236, 68, 12" Text="TOULOUSE" />
+                    <uc:OcrTextInfo Region="544, 236, 40, 12" Text="France" />
+                    <uc:OcrTextInfo Region="18, 254, 52, 12" Text="FP75053" />
+                    <uc:OcrTextInfo Region="94, 254, 22, 12" Text="Bud" />
+                    <uc:OcrTextInfo Region="118, 254, 26, 12" Text="Baril" />
+                    <uc:OcrTextInfo Region="394, 254, 114, 12" Text="MONT-DE-MARSAN" />
+                    <uc:OcrTextInfo Region="544, 254, 40, 12" Text="France" />
+                    <uc:OcrTextInfo Region="18, 274, 54, 12" Text="DB83622" />
+                    <uc:OcrTextInfo Region="94, 274, 38, 12" Text="Wilson" />
+                    <uc:OcrTextInfo Region="134, 274, 24, 12" Text="Gau" />
+                    <uc:OcrTextInfo Region="394, 274, 50, 12" Text="Canzano" />
+                    <uc:OcrTextInfo Region="544, 274, 24, 14" Text="Italy" />
+                    <uc:OcrTextInfo Region="18, 292, 54, 12" Text="AD38755" />
+                    <uc:OcrTextInfo Region="92, 292, 36, 12" Text="Austin" />
+                    <uc:OcrTextInfo Region="130, 292, 52, 12" Text="Villacorta" />
+                    <uc:OcrTextInfo Region="394, 292, 50, 14" Text="Mediglia" />
+                    <uc:OcrTextInfo Region="544, 292, 24, 14" Text="Italy" />
+                    <uc:OcrTextInfo Region="18, 312, 54, 12" Text="QS86336" />
+                    <uc:OcrTextInfo Region="94, 312, 32, 12" Text="Donn" />
+                    <uc:OcrTextInfo Region="126, 312, 42, 12" Text="Chabot" />
+                    <uc:OcrTextInfo Region="394, 312, 66, 12" Text="Ebersbrunn" />
+                    <uc:OcrTextInfo Region="544, 312, 52, 14" Text="Germany" />
+                    <uc:OcrTextInfo Region="20, 330, 52, 12" Text="HR70321" />
+                    <uc:OcrTextInfo Region="94, 330, 48, 12" Text="Clement" />
+                    <uc:OcrTextInfo Region="142, 330, 46, 12" Text="Paulette" />
+                    <uc:OcrTextInfo Region="394, 330, 28, 12" Text="Deva" />
+                    <uc:OcrTextInfo Region="544, 330, 52, 12" Text="Romania" />
+                    <uc:OcrTextInfo Region="18, 350, 52, 12" Text="AD55686" />
+                    <uc:OcrTextInfo Region="94, 350, 34, 14" Text="Digna" />
+                    <uc:OcrTextInfo Region="130, 350, 46, 12" Text="Buffaloe" />
+                    <uc:OcrTextInfo Region="394, 350, 50, 14" Text="Solingen" />
+                    <uc:OcrTextInfo Region="446, 350, 60, 12" Text="Merscheid" />
+                    <uc:OcrTextInfo Region="544, 350, 52, 14" Text="Germany" />
+                    <uc:OcrTextInfo Region="18, 368, 50, 12" Text="FT44139" />
+                    <uc:OcrTextInfo Region="92, 368, 30, 12" Text="Allan" />
+                    <uc:OcrTextInfo Region="124, 368, 46, 12" Text="Camara" />
+                    <uc:OcrTextInfo Region="394, 368, 80, 12" Text="Pfeffenhausen" />
+                    <uc:OcrTextInfo Region="544, 368, 52, 14" Text="Germany" />
+                    <uc:OcrTextInfo Region="18, 386, 50, 12" Text="KJ93404" />
+                    <uc:OcrTextInfo Region="94, 388, 36, 12" Text="Garret" />
+                    <uc:OcrTextInfo Region="132, 388, 42, 14" Text="Reising" />
+                    <uc:OcrTextInfo Region="394, 388, 24, 12" Text="San" />
+                    <uc:OcrTextInfo Region="418, 388, 38, 14" Text="Filippo" />
+                    <uc:OcrTextInfo Region="544, 388, 24, 14" Text="Italy" />
+                    <uc:OcrTextInfo Region="18, 406, 52, 12" Text="CX76110" />
+                    <uc:OcrTextInfo Region="94, 406, 36, 12" Text="Mirian" />
+                    <uc:OcrTextInfo Region="132, 406, 48, 12" Text="Derosier" />
+                    <uc:OcrTextInfo Region="394, 406, 48, 12" Text="Dresden" />
+                    <uc:OcrTextInfo Region="544, 406, 52, 14" Text="Germany" />
+                  </scg:List>
+                </uc:CVCache.OcrTexts>
+              </uc:CVCache>
+            </scg:List>
+          </uc:CvCacheContainer.Caches>
+        </uc:CvCacheContainer>
+      </p:CVScope.DesignTimeCacheContainer>
+      <p:CVScope.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+          <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25.333333333333332" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="auto" Profile="Screen" Scale="1" Timeout="100000" />
+        </ActivityFunc>
+      </p:CVScope.OCREngine>
+      <p:CVScope.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1124fe9e-f4e5-41ef-85e2-9fefadd3b789" InformativeScreenshot="4b8bfaa4ba1dfc4add8ffe1be397f293" Selector="&lt;wnd app='acme-system3.exe' ctrlname='Dashboard' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
+      </p:CVScope.Target>
+      <p:CVScope.UseLocalServer>
+        <InArgument x:TypeArguments="x:Boolean" />
+      </p:CVScope.UseLocalServer>
+    </p:CVScope>
+  </Sequence>
+</Activity>
